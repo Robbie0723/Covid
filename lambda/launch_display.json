@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "response": {
+    "outputSpeech": {
+      "type": "SSML",
+      "ssml": "<speak>Hello World! You should now also see my greeting on the device.</speak>"
+    },
+    "sessionAttributes": {},
+    "directives": [
+      {
+        "type": "Alexa.Presentation.APLT.RenderDocument",
+        "token": "helloworldToken",
+        "document": {
+          "version": "1.0",
+          "type": "APLT",
+          "mainTemplate": {
+            "item": {
+              "type": "Pager",
+              "id": "myPager",
+              "items": [
+                {
+                  "type": "Text",
+                  "textAlign": "center",
+                  "overflow": "marquee",
+                  "text": "Hello World",
+                  "msPerCharacter": 500
+                },
+                {
+                  "type": "Text",
+                  "textAlign": "center",
+                  "overflow": "marquee",
+                  "text": "Welcome",
+                  "msPerCharacter": 500
+                }
+              ]
+            }
+          },
+          "onMount": {
+            "type": "AutoPage",
+            "componentId": "myPager",
+            "delay": 2000,
+            "count": 2,
+            "duration": 200
+          }
+        }
+      }
+    ]
+  }
+}

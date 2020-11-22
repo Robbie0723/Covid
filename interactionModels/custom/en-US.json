@@ -1,0 +1,190 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "virus status updates",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        },
+        {
+          "name": "GetWorldDataIntent",
+          "slots": [],
+          "samples": [
+            "how many are infected in the world",
+            "how many cases in the world",
+            "how many in the world",
+            "tell me about the world",
+            "world status",
+            "world",
+            "what is the current status in the world",
+            "what is the current status"
+          ]
+        },
+        {
+          "name": "GetCountryDataIntent",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country",
+              "samples": [
+                "i am looking for {country}",
+                "{country}",
+                "i am searching for {country}"
+              ]
+            }
+          ],
+          "samples": [
+            "ask virus status updates how many cases are in the country of  {country}",
+            "ask virus status updates how many cases are in {country}",
+            "ask virus status updates about the country {country}",
+            "Tell me about {country}",
+            "I\u0027m looking for the country of {country}",
+            "i am searching for country",
+            "what is the data for {country}",
+            "country",
+            "country {country}",
+            "what is the  data for country {country}"
+          ]
+        },
+        {
+          "name": "GetStateDataIntent",
+          "slots": [
+            {
+              "name": "state",
+              "type": "AMAZON.US_STATE",
+              "samples": [
+                "i am looking for {state}",
+                "{state}"
+              ]
+            }
+          ],
+          "samples": [
+            "ask virus status updates how many cases are in the state of {state}",
+            "ask virus status updates how many cases are in {state}",
+            "ask virus status updates about the state of {state}",
+            "state",
+            "i\u0027m in the state of {state}",
+            "{state} state",
+            "tell me about the state of {state}",
+            "state {state}",
+            "what about the state of {state}",
+            "what are the cases in {state}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetCountryDataIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1531224125796.1516402169695"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "GetStateDataIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "state",
+              "type": "AMAZON.US_STATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1336373212013.1480940974442"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1531224125796.1516402169695",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what country are you looking for?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1336373212013.1480940974442",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what state are you looking for?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "24"
+}

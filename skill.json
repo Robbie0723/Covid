@@ -1,0 +1,109 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "A skill that will allow users to hear about the current status of the Covid-19 virus in a particular location.",
+          "examplePhrases": [
+            "Alexa open virus status updates",
+            "Country USA",
+            "What about the state of Massachusetts"
+          ],
+          "keywords": [
+            "coronaviurs",
+            "novel",
+            "coronavirus",
+            "covid-19",
+            "viruses"
+          ],
+          "name": "virus status updates",
+          "description": "This is a simple skill which can be used to find the number of reported cases, number of active cases, number of recovered cases, and the total number of deaths caused by the Covid-19 virus, also  known as the Novel Coronavirus, in a particular location. Customers can search by providing either a state in the United States of America, or by providing a country\u0027s name.\n\nWe would like to offer our condolences to anyone who has been affected by this pandemic.   This skill is designed for informational purposes only.",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "sourceLocaleForLanguages": [
+          {
+            "sourceLocale": "en-US",
+            "language": "en"
+          }
+        ],
+        "isActive": true
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "This skill is compatible with both display and non-display devices.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:274367874618:function:5f4f5573-b59d-4b16-87c3-f0bb4e7572d7:Release_0"
+        },
+        "interfaces": [
+          {
+            "minimumTemplateVersion": "1.0",
+            "type": "RENDER_TEMPLATE"
+          },
+          {
+            "supportedViewports": [
+              {
+                "minHeight": 480,
+                "mode": "HUB",
+                "shape": "ROUND",
+                "maxHeight": 480,
+                "minWidth": 480,
+                "maxWidth": 480
+              },
+              {
+                "minHeight": 600,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 600,
+                "minWidth": 1024,
+                "maxWidth": 1024
+              },
+              {
+                "minHeight": 800,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 800,
+                "minWidth": 1280,
+                "maxWidth": 1280
+              },
+              {
+                "minHeight": 540,
+                "mode": "TV",
+                "shape": "RECTANGLE",
+                "maxHeight": 540,
+                "minWidth": 960,
+                "maxWidth": 960
+              },
+              {
+                "minHeight": 480,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 480,
+                "minWidth": 960,
+                "maxWidth": 960
+              }
+            ],
+            "type": "ALEXA_PRESENTATION_APL"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
